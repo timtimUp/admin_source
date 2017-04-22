@@ -1,0 +1,993 @@
+<!DOCTYPE html>
+<html class="no-js css-menubar" lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+  <meta name="description" content="bootstrap admin template">
+  <meta name="author" content="">
+  <title>云主机首页--群英云管理平台</title>
+  <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+  <link rel="shortcut icon" href="images/favicon.ico">
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/bootstrap-extend.min.css">
+  <link rel="stylesheet" href="css/site.min.css">
+  <!-- Plugins -->
+  <link rel="stylesheet" href="vendor/animsition/animsition.css">
+  <link rel="stylesheet" href="vendor/asscrollable/asScrollable.css">
+  <link rel="stylesheet" href="vendor/switchery/switchery.css">
+  <link rel="stylesheet" href="vendor/intro-js/introjs.css">
+  <link rel="stylesheet" href="vendor/slidepanel/slidePanel.css">
+  <link rel="stylesheet" href="vendor/flag-icon-css/flag-icon.css">
+  <link rel="stylesheet" href="vendor/chartist-js/chartist.css">
+  <link rel="stylesheet" href="vendor/jvectormap/jquery-jvectormap.css">
+  <link rel="stylesheet" href="vendor/chartist-plugin-tooltip/chartist-plugin-tooltip.css">
+  <link rel="stylesheet" href="examples/css/dashboard/v1.css">
+  <!-- Fonts -->
+  <link rel="stylesheet" href="fonts/weather-icons/weather-icons.css">
+  <link rel="stylesheet" href="fonts/web-icons/web-icons.min.css">
+  <link rel="stylesheet" href="fonts/brand-icons/brand-icons.min.css">
+  <link rel='stylesheet' href="fonts/googleapis/googleapis.css">
+   <!-- Fonts -->
+   
+  <!--菜单-->
+  <link href="css/css.css" rel="stylesheet" type="text/css" />
+  <link href="css/jquery.mCustomScrollbar.css" rel="stylesheet">
+  
+
+  <!--[if lt IE 9]>
+    <script src="vendor/html5shiv/html5shiv.min.js"></script>
+    <![endif]-->
+  <!--[if lt IE 10]>
+    <script src="vendor/media-match/media.match.min.js"></script>
+    <script src="vendor/respond/respond.min.js"></script>
+    <![endif]-->
+  <!-- Scripts -->
+  <script src="vendor/modernizr/modernizr.js"></script>
+  <script src="vendor/breakpoints/breakpoints.js"></script>
+  <script>
+  Breakpoints();
+  </script>
+    <script src="js/jquery.js"></script>
+  
+  <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+  
+</head>
+<body class="dashboard">
+  <!--[if lt IE 8]>
+        <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+  <nav class="site-navbar navbar navbar-default navbar-fixed-top navbar-mega" role="navigation">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle hamburger hamburger-close navbar-toggle-left hided"   data-toggle="menubar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="hamburger-bar"></span>
+      </button>
+      <button type="button" class="navbar-toggle collapsed" data-target="#site-navbar-collapse"   data-toggle="collapse">
+        <i class="icon wb-more-horizontal" aria-hidden="true"></i>
+      </button>
+      <div data-toggle="gridmenu">
+        <img class="navbar-brand-logo" src="images/smallLogo.jpg" title="群英云">
+      </div>
+      <button type="button" class="navbar-toggle collapsed" data-target="#site-navbar-search"   data-toggle="collapse">
+        <span class="sr-only">Toggle Search</span>
+        <i class="icon wb-search" aria-hidden="true"></i>
+      </button>
+    </div>
+    <div class="navbar-container container-fluid">
+      <!-- Navbar Collapse -->
+      <div class="collapse navbar-collapse navbar-collapse-toolbar" id="site-navbar-collapse">
+        <!-- Navbar Toolbar -->
+        <ul class="nav navbar-toolbar">
+          <li class="hidden-float" id="toggleMenubar">
+            <a data-toggle="menubar" href="#" role="button">
+              <i class="icon hamburger hamburger-arrow-left">
+                  <span class="sr-only">伸缩菜单</span>
+                  <span class="hamburger-bar"></span>
+                </i>
+            </a>
+          </li>
+          <li class="hidden-xs" id="toggleFullscreen">
+            <a class="icon icon-fullscreen" data-toggle="fullscreen" href="#" role="button">
+              <span class="sr-only">全屏</span>
+            </a>
+          </li>
+       
+          
+        </ul>
+        <!-- End Navbar Toolbar -->
+        <!-- Navbar Toolbar Right -->
+        <ul class="nav navbar-toolbar navbar-right navbar-toolbar-right">
+        
+          <li class="dropdown">
+            <a class="navbar-avatar dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false"    data-animation="scale-up" role="button">
+                  <i class="icon wb-user font-size-24" ></i>
+             </a>
+            <ul class="dropdown-menu" role="menu">
+              <li role="presentation">
+                <a href="javascript:void(0)" role="menuitem"><i class="icon wb-user" aria-hidden="true"></i> 用户中心</a>
+              </li>
+              <li role="presentation">
+                <a href="javascript:void(0)" role="menuitem"><i class="icon wb-payment" aria-hidden="true"></i> 财务账户</a>
+              </li>
+              <li role="presentation">
+                <a href="javascript:void(0)" role="menuitem"><i class="icon wb-settings" aria-hidden="true"></i> 修改密码</a>
+              </li>
+              <li class="divider" role="presentation"></li>
+              <li role="presentation">
+                <a href="javascript:void(0)" role="menuitem"><i class="icon wb-power" aria-hidden="true"></i> 退出</a>
+              </li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a data-toggle="dropdown" href="javascript:void(0)" title="Notifications" aria-expanded="false"
+            data-animation="scale-up" role="button">
+              <i class="icon wb-bell" aria-hidden="true"></i>
+              <span class="badge badge-danger up">5</span>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-right dropdown-menu-media" role="menu">
+              <li class="dropdown-menu-header" role="presentation">
+                <h5>NOTIFICATIONS</h5>
+                <span class="label label-round label-danger">New 5</span>
+              </li>
+              <li class="list-group" role="presentation">
+                <div data-role="container">
+                  <div data-role="content">
+                    <a class="list-group-item" href="javascript:void(0)" role="menuitem">
+                      <div class="media">
+                        <div class="media-left padding-right-10">
+                          <i class="icon wb-order bg-red-600 white icon-circle" aria-hidden="true"></i>
+                        </div>
+                        <div class="media-body">
+                          <h6 class="media-heading">A new order has been placed</h6>
+                          <time class="media-meta" datetime="2015-06-12T20:50:48+08:00">5 hours ago</time>
+                        </div>
+                      </div>
+                    </a>
+                    <a class="list-group-item" href="javascript:void(0)" role="menuitem">
+                      <div class="media">
+                        <div class="media-left padding-right-10">
+                          <i class="icon wb-user bg-green-600 white icon-circle" aria-hidden="true"></i>
+                        </div>
+                        <div class="media-body">
+                          <h6 class="media-heading">Completed the task</h6>
+                          <time class="media-meta" datetime="2015-06-11T18:29:20+08:00">2 days ago</time>
+                        </div>
+                      </div>
+                    </a>
+                    <a class="list-group-item" href="javascript:void(0)" role="menuitem">
+                      <div class="media">
+                        <div class="media-left padding-right-10">
+                          <i class="icon wb-settings bg-red-600 white icon-circle" aria-hidden="true"></i>
+                        </div>
+                        <div class="media-body">
+                          <h6 class="media-heading">Settings updated</h6>
+                          <time class="media-meta" datetime="2015-06-11T14:05:00+08:00">2 days ago</time>
+                        </div>
+                      </div>
+                    </a>
+                    <a class="list-group-item" href="javascript:void(0)" role="menuitem">
+                      <div class="media">
+                        <div class="media-left padding-right-10">
+                          <i class="icon wb-calendar bg-blue-600 white icon-circle" aria-hidden="true"></i>
+                        </div>
+                        <div class="media-body">
+                          <h6 class="media-heading">Event started</h6>
+                          <time class="media-meta" datetime="2015-06-10T13:50:18+08:00">3 days ago</time>
+                        </div>
+                      </div>
+                    </a>
+                    <a class="list-group-item" href="javascript:void(0)" role="menuitem">
+                      <div class="media">
+                        <div class="media-left padding-right-10">
+                          <i class="icon wb-chat bg-orange-600 white icon-circle" aria-hidden="true"></i>
+                        </div>
+                        <div class="media-body">
+                          <h6 class="media-heading">Message received</h6>
+                          <time class="media-meta" datetime="2015-06-10T12:34:48+08:00">3 days ago</time>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </li>
+              <li class="dropdown-menu-footer" role="presentation">
+                <a class="dropdown-menu-footer-btn" href="javascript:void(0)" role="button">
+                  <i class="icon wb-settings" aria-hidden="true"></i>
+                </a>
+                <a href="javascript:void(0)" role="menuitem">
+                    All notifications
+                  </a>
+              </li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a data-toggle="dropdown" href="javascript:void(0)" title="Messages" aria-expanded="false"
+            data-animation="scale-up" role="button">
+              <i class="icon wb-envelope" aria-hidden="true"></i>
+              <span class="badge badge-info up">3</span>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-right dropdown-menu-media" role="menu">
+              <li class="dropdown-menu-header" role="presentation">
+                <h5>MESSAGES</h5>
+                <span class="label label-round label-info">New 3</span>
+              </li>
+              <li class="list-group" role="presentation">
+                <div data-role="container">
+                  <div data-role="content">
+                    <a class="list-group-item" href="javascript:void(0)" role="menuitem">
+                      <div class="media">
+                        <div class="media-left padding-right-10">
+                          <span class="avatar avatar-sm avatar-online">
+                            <img src="../../global/portraits/2.jpg" alt="..." />
+                            <i></i>
+                          </span>
+                        </div>
+                        <div class="media-body">
+                          <h6 class="media-heading">Mary Adams</h6>
+                          <div class="media-meta">
+                            <time datetime="2015-06-17T20:22:05+08:00">30 minutes ago</time>
+                          </div>
+                          <div class="media-detail">Anyways, i would like just do it</div>
+                        </div>
+                      </div>
+                    </a>
+                    <a class="list-group-item" href="javascript:void(0)" role="menuitem">
+                      <div class="media">
+                        <div class="media-left padding-right-10">
+                          <span class="avatar avatar-sm avatar-off">
+                            <img src="../../global/portraits/3.jpg" alt="..." />
+                            <i></i>
+                          </span>
+                        </div>
+                        <div class="media-body">
+                          <h6 class="media-heading">Caleb Richards</h6>
+                          <div class="media-meta">
+                            <time datetime="2015-06-17T12:30:30+08:00">12 hours ago</time>
+                          </div>
+                          <div class="media-detail">I checheck the document. But there seems</div>
+                        </div>
+                      </div>
+                    </a>
+                    <a class="list-group-item" href="javascript:void(0)" role="menuitem">
+                      <div class="media">
+                        <div class="media-left padding-right-10">
+                          <span class="avatar avatar-sm avatar-busy">
+                            <img src="../../global/portraits/4.jpg" alt="..." />
+                            <i></i>
+                          </span>
+                        </div>
+                        <div class="media-body">
+                          <h6 class="media-heading">June Lane</h6>
+                          <div class="media-meta">
+                            <time datetime="2015-06-16T18:38:40+08:00">2 days ago</time>
+                          </div>
+                          <div class="media-detail">Lorem ipsum Id consectetur et minim</div>
+                        </div>
+                      </div>
+                    </a>
+                    <a class="list-group-item" href="javascript:void(0)" role="menuitem">
+                      <div class="media">
+                        <div class="media-left padding-right-10">
+                          <span class="avatar avatar-sm avatar-away">
+                            <img src="../../global/portraits/5.jpg" alt="..." />
+                            <i></i>
+                          </span>
+                        </div>
+                        <div class="media-body">
+                          <h6 class="media-heading">Edward Fletcher</h6>
+                          <div class="media-meta">
+                            <time datetime="2015-06-15T20:34:48+08:00">3 days ago</time>
+                          </div>
+                          <div class="media-detail">Dolor et irure cupidatat commodo nostrud nostrud.</div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </li>
+              <li class="dropdown-menu-footer" role="presentation">
+                <a class="dropdown-menu-footer-btn" href="javascript:void(0)" role="button">
+                  <i class="icon wb-settings" aria-hidden="true"></i>
+                </a>
+                <a href="javascript:void(0)" role="menuitem">
+                    See all messages
+                  </a>
+              </li>
+            </ul>
+          </li>
+        
+        </ul>
+        <!-- End Navbar Toolbar Right -->
+      </div>
+      <!-- End Navbar Collapse -->
+      <!-- Site Navbar Seach -->
+      <div class="collapse navbar-search-overlap" id="site-navbar-search">
+        <form role="search">
+          <div class="form-group">
+            <div class="input-search">
+              <i class="input-search-icon wb-search" aria-hidden="true"></i>
+              <input type="text" class="form-control" name="site-search" placeholder="Search...">
+              <button type="button" class="input-search-close icon wb-close" data-target="#site-navbar-search"
+              data-toggle="collapse" aria-label="Close"></button>
+            </div>
+          </div>
+        </form>
+      </div>
+      <!-- End Site Navbar Seach -->
+    </div>
+  </nav>
+  <div class="site-menubar">
+    
+
+<div class="leftMenu">
+  <div class="firstNavScroll">
+  	<a href="#" dataChi="none"><i></i><img src="images/lfticon1.png" /><span>首页</span></a>
+  	<a href="#" dataChi="secM2" class="cur"><i></i><img src="images/lfticon4.png" /><span>云主机</span></a>
+  	<a href="#" dataChi="secM3"><i></i><img src="images/lfticon3.png" /><span>租用托管</span></a> 
+  	<a href="#" dataChi="secM4" ><i></i><img src="images/lfticon2.png" /><span>域名空间</span></a>
+  	<a href="#" dataChi="secM5"><i></i><img src="images/lfticon5.png" /><span>CDN加速</span></a>
+  	<a href="#" dataChi="secM6"><i></i><img src="images/lfticon6.png" /><span>智能DNS</span></a>
+    <a href="#" dataChi="secM7"><i></i><img src="images/lfticon7.png" /><span>财务帐户</span></a>
+    <a href="#" dataChi="secM8"><i></i><img src="images/lfticon8.png" /><span>用户信息</span></a>
+  </div>
+  <div class="secondNavScroll" id="secondNavScroll">
+    <div class="cons">
+	 <div id="default_show" class="secCon secM2 shows"  >
+        <a href="cloud_index.html" class="on">总览</a>
+        <a href="cloud_list.html">云服务器</a>
+		<a href="cloud_order_list.html">订单管理</a>
+        <a href="cloud_disc_list.html">磁盘管理</a>
+        <a href="cloud_bandwidth_list.html">IP带宽</a>
+        <a href="cloud_snap_list.html">快照管理</a>
+        <a href="cloud_image_list.html">镜像管理</a>
+ 		<a href="cloud_record_list.html">操作日志</a>
+      </div>
+      
+      <div class="secCon secM3">
+        <a href="server_manage.html">服务器</a>
+        <a href="server_order.html">订单管理</a>
+		<a href="server_whitelist.html">白名单</a>
+        <!-- <a href="#">资产管理</a> -->
+      </div>
+     <div class="secCon secM4">
+        <a href="#">域名管理</a>
+		<a href="#">域名转入</a>
+        <a href="#">空间管理</a>
+        <a href="#">数据库</a>        
+        <a href="#">日志管理</a>
+	    <a href="#">订单管理</a>
+ 
+      </div>
+      <div class="secCon secM5">
+        <a href="#">总览</a>
+        <a href="#">加速域名</a>
+        <a href="#">刷新缓存</a>
+        <a href="#">文件分发</a>
+        <a href="#">带宽统计</a>
+        <a href="#">日志下载</a>
+
+      </div>
+      <div class="secCon secM6">
+        <a href="#">域名解析</a>
+        <a href="#">DNS管理</a>
+        <a href="#">订单管理</a>
+        <a href="#">消息通知</a>
+        <a href="#">操作日志</a>
+		<a href="#">DNS诊断</a>
+      </div>
+      <div class="secCon secM7">
+        <a href="#">财务账户</a>
+        <a href="#">消费记录</a>
+        <a href="#">发票信息</a>
+		<a href="#">汇款信息</a>
+      </div>
+      <div class="secCon secM8">
+        <a href="#">基本信息</a>
+        <a href="#">安全认证</a>
+      </div>
+    </div>
+  </div>
+<!------------------->
+<div class="secondNavScrolls" id="secondNavScrolls">
+    <div class="consz">
+    	<div class="secConz none margin-top0"  >
+        <a href="#" class="on">域名管理</a>
+        <a href="#">主机管理</a>
+	     	<a href="#">域名交易</a>
+        <a href="#">域名抢注</a>
+      </div>
+	 <div class="secConz secM2 margin-top84" datachs = "secM2"  >
+        <a href="cloud_index.html" class="on">总览</a>
+        <a href="cloud_list.html">云服务器</a>
+		<a href="cloud_order_list.html">订单管理</a>
+        <a href="cloud_disc_list.html">磁盘管理</a>
+        <a href="cloud_bandwidth_list.html">IP带宽</a>
+        <a href="cloud_snap_list.html">快照管理</a>
+        <a href="cloud_image_list.html">镜像管理</a>
+ 		<a href="cloud_record_list.html">操作日志</a>
+      </div>
+      
+      <div class="secConz secM3 margin-top168" datachs = "secM3">
+        <a href="server_manage.html">服务器</a>
+        <a href="server_order.html">订单管理</a>
+		<a href="server_whitelist.html">白名单</a>
+        <!-- <a href="#">资产管理</a> -->
+      </div>
+     <div class="secConz secM4  margin-top252" datachs = "secM4">
+        <a href="#">域名管理</a>
+		<a href="#">域名转入</a>
+        <a href="#">空间管理</a>
+        <a href="#">数据库</a>        
+        <a href="#">日志管理</a>
+	    <a href="#">订单管理</a>
+ 
+      </div>
+      <div class="secConz secM5  margin-top336" datachs = "secM5">
+        <a href="#">总览</a>
+        <a href="#">加速域名</a>
+        <a href="#">刷新缓存</a>
+        <a href="#">文件分发</a>
+        <a href="#">带宽统计</a>
+        <a href="#">日志下载</a>
+
+      </div>
+      <div class="secConz secM6  margin-top420 " datachs = "secM6">
+        <a href="#">域名解析</a>
+        <a href="#">DNS管理</a>
+        <a href="#">订单管理</a>
+        <a href="#">消息通知</a>
+        <a href="#">操作日志</a>
+				<a href="#">DNS诊断</a>
+      </div>
+      <div class="secConz secM7 margin-top504" datachs = "secM7">
+        <a href="#">财务账户</a>
+        <a href="#">消费记录</a>
+        <a href="#">发票信息</a>
+				<a href="#">汇款信息</a>
+      </div>
+      <div class="secConz secM8  margin-top588" datachs = "secM8">
+        <a href="#">基本信息</a>
+        <a href="#">安全认证</a>
+      </div>
+    </div>
+  </div>
+<!--------------------->
+</div>
+
+<script type="text/javascript">
+
+
+$(function(){
+
+	lftMenuSize();
+	$(window).resize(function(){//屏幕高度变化时初始化高度
+		lftMenuSize();
+	});
+	
+$()
+
+
+	$(".firstNavScroll a").click(function(){//点击出现二级菜单
+		var dataChi = $(this).attr("dataChi");
+		var attrclass = $("#toggleMenubar i").attr('class');
+		$(this).addClass("cur").siblings().removeClass("cur");
+		if(attrclass != "icon hamburger hamburger-arrow-left hided unfolded"){
+			$("#secondNavScroll").hide();
+			$("#secondNavScrolls div").removeClass("shows1");
+			$("#secondNavScrolls").show();
+			$("#secondNavScrolls").find('.'+dataChi).addClass("shows1");
+		}else{
+			$("#secondNavScrolls").hide();
+			$("#secondNavScroll div").removeClass("shows");
+			$("#secondNavScroll").show();
+			$("#secondNavScroll").find('.'+dataChi).addClass("shows");
+			
+		}
+	});
+	
+	
+	$("#toggleMenubar").click(function(){
+		var attrclass = $("#toggleMenubar i").attr('class');
+		if(attrclass == "icon hamburger hamburger-arrow-left hided unfolded"){
+			$("#secondNavScroll").hide();
+		}else{
+			$("#secondNavScroll").show();
+			$("#secondNavScrolls").hide();
+		}		
+	});
+
+
+});
+
+function lftMenuSize(){//初始化高度
+	var winH=$(window).height();
+	$(".leftMenu").height(winH);
+	//	$(".secondNavScroll").addClass(".secondNavScrollz");
+}
+
+/*
+	//左侧菜单toggleMenubar
+	$(".firstNavScroll a").click(function(){//点击出现二级菜单
+		$(this).addClass("cur").siblings().removeClass("cur");
+		var cls=$(this).attr("dataChi");
+		if(cls=="none"){
+			$(".secondNavScroll .shows").removeClass("shows");
+			}else{
+				$(".secondNavScroll .shows").removeClass("shows");
+				$("."+cls).addClass("shows");
+				}
+		});
+	});
+
+	$(function(){
+	lftMenuSize();
+	$(".firstNavScroll a").click(function(){//点击出现二级菜单
+		var cls=$(this).attr("dataChi");
+		if(cls=="none"){
+			$(".secondNavScrolls .shows1").removeClass("shows1");
+			}else{
+				//$(".secondNavScrolls .shows1").removeClass("shows1");
+				$("."+cls).addClass("shows1");
+				}
+		});
+	});
+	
+$(window).resize(function(){//屏幕高度变化时初始化高度
+	lftMenuSize();
+	});
+	
+$(".firstNavScroll").mCustomScrollbar({
+	theme:"dark-thin",
+	autoExpandScrollbar:true,
+	advanced:{autoExpandHorizontalScroll:true}
+  });
+	
+$(".secondNavScroll").mCustomScrollbar({
+	theme:"dark-thin",
+	autoExpandScrollbar:true,
+	advanced:{autoExpandHorizontalScroll:true}
+  });
+	
+function lftMenuSize(){//初始化高度
+	var winH=$(window).height();
+	$(".leftMenu").height(winH);
+//	$(".secondNavScroll").addClass(".secondNavScrollz");
+	}
+
+//顶部按钮
+$("#toggleMenubar").click(function(){
+ var classa = $("#secondNavScroll").attr('class');
+ if(classa == 'secondNavScroll mCustomScrollbar _mCS_2 mCS_no_scrollbar'){
+ 		$("#secondNavScroll").attr("class", "secondNavScrollz");
+// 		$(".secondNavScrolls").show();
+ 		
+ }else{
+ 	$("#secondNavScroll").attr("class", "secondNavScrollz mCS_no_scrollbar");
+// 	$(".secondNavScrolls").show();
+ }
+ if(classa == 'secondNavScrollz mCS_no_scrollbar'){
+ 		$("#secondNavScroll").attr("class", "secondNavScroll");
+// 		$(".secondNavScrolls").hide();
+ }
+});
+
+$("#toggleMenubar").click(function(){
+   var classz = $("#secondNavScrolls").attr('class');
+   if(classz != 'secondNavScrolls'){
+   		$("#secondNavScrolls").attr("class", "secondNavScrollshide");
+   }else{
+   	$("#secondNavScrolls").attr("class", "secondNavScrolls");
+   }
+
+});*/
+
+
+
+</script>
+
+
+  </div>
+   
+  <!-- Page -->
+  <div class="page animsition">
+    <div class="page-content padding-30 container-fluid">
+      <div class="row" data-plugin="matchHeight" data-by-row="true">
+      
+         
+        
+         
+        <div class="col-xlg-6 col-md-12">
+          <!-- Widget OVERALL VIEWS -->
+          <div class="widget widget-shadow widget-responsive" id="widgetOverallViews">
+            <div class="widget-content padding-30">
+              <div class="row padding-bottom-30" style="height:calc(100% - 250px);">
+                <div class="col-xs-4">
+                  <div class="counter counter-md text-left">
+                    <div class="counter-label">账户余额</div>
+                    <div class="counter-number-group text-truncate">
+                      <span class="counter-number-related red-600">￥</span>
+                      <span class="counter-number red-600">432,852</span>
+                    </div>
+                    <div class="counter-label">亲爱的用户，您当前可以余额</div>
+                  </div>
+                </div>
+                <div class="col-xs-4">
+                  <div class="counter counter-sm text-left inline-block">
+                    <div class="counter-label">累计充值</div>
+                    <div class="counter-number-group">
+                      <span class="counter-number-related">￥</span>
+                      <span class="counter-number">12,346</span>
+                    </div>
+                  </div>
+                  <div class="ct-chart inline-block small-bar-one"></div>
+                </div>
+                <div class="col-xs-4">
+                  <div class="counter counter-sm text-left inline-block">
+                    <div class="counter-label">累计消费</div>
+                    <div class="counter-number-group">
+                      <span class="counter-number-related">￥</span>
+                      <span class="counter-number">17,555</span>
+                    </div>
+                  </div>
+                  <div class="ct-chart inline-block small-bar-two"></div>
+                </div>
+              </div>
+              <div class="ct-chart line-chart height-250"></div>
+            </div>
+          </div>
+          <!-- End Widget OVERALL VIEWS -->
+        </div>
+        <div class="col-xlg-6 col-md-12">
+          <!-- Widget Timeline -->
+          <div class="widget widget-shadow widget-responsive" id="widgetTimeline">
+            <div class="widget-content">
+              <div class="padding-30" style="height:120px;">
+                <div class="row">
+                  <div class="col-xs-4">
+                    <div class="counter text-left">
+                      <div class="counter-label blue-grey-700">Total usage</div>
+                      <div class="counter-number-group">
+                        <span class="counter-number red-600">21,451</span>
+                        <span class="counter-number-related red-600">MB</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-xs-4">
+                    <div class="counter text-left">
+                      <div class="counter-label">Currently</div>
+                      <div class="counter-number-group">
+                        <span class="counter-number">227.34</span>
+                        <span class="counter-number-related">KB</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-xs-4">
+                    <div class="counter text-left">
+                      <div class="counter-label">Average</div>
+                      <div class="counter-number-group">
+                        <span class="counter-number">117.65</span>
+                        <span class="counter-number-related">MB</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <ul class="list-unstyled padding-bottom-50" style="height:calc(100% - 270px);">
+                <li class="padding-horizontal-30 padding-vertical-15 container-fluid">
+                  <div class="row">
+                    <div class="col-xs-3">Mail App</div>
+                    <div class="col-xs-6">210,685 users are using</div>
+                    <div class="col-xs-3 green-600">227.34KB</div>
+                  </div>
+                </li>
+                <li class="padding-horizontal-30 padding-vertical-15 container-fluid">
+                  <div class="row">
+                    <div class="col-xs-3">Calendar</div>
+                    <div class="col-xs-6">10,685 users are using</div>
+                    <div class="col-xs-3 green-600">128.62KB</div>
+                  </div>
+                </li>
+              </ul>
+              <div class="ct-chart height-150"></div>
+            </div>
+          </div>
+          <!-- End Widget Timeline -->
+        </div>
+        <div class="col-xlg-6 col-md-12">
+          <!-- Panel California -->
+          <div class="widget widget-shadow" id="widgetWeather">
+            <div class="widget-content">
+              <div class="row no-space height-full">
+                <div class="col-sm-7 height-full">
+                  <div class="padding-35 text-center">
+                    <h4>您的服务云服务器</h4>
+                    <p class="blue-grey-400 margin-bottom-35">MONDAY MAY 11, 2015</p>
+                    <canvas id="widgetSunny" height="60" width="60"></canvas>
+                    <div class="font-size-40 red-600">
+                      26
+                      <span class="font-size-30">台</span>
+                    </div>
+                    <div>Sunday</div>
+                  </div>
+                  <div class="weather-times padding-30">
+                    <div class="row no-space text-center">
+                      <div class="col-xs-3">
+                        <div class="weather-day vertical-align">
+                          <div class="vertical-align-middle">
+                            <div class="margin-bottom-5">广州</div>
+                            <i class="wi-day-cloudy font-size-24 margin-bottom-5"></i>
+                            <div class="red-600">10
+                              <span class="font-size-12">台</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-xs-3">
+                        <div class="weather-day vertical-align">
+                          <div class="vertical-align-middle">
+                            <div class="margin-bottom-5">北京</div>
+                            <i class="wi-day-sunny font-size-24 margin-bottom-5"></i>
+                            <div class="red-600">26
+                              <span class="font-size-12">台</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-xs-3">
+                        <div class="weather-day vertical-align">
+                          <div class="vertical-align-middle">
+                            <div class="margin-bottom-5">上海</div>
+                            <i class="wi-day-sunny font-size-24 margin-bottom-5"></i>
+                            <div class="red-600">2
+                              <span class="font-size-12">台</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-xs-3">
+                        <div class="weather-day vertical-align">
+                          <div class="vertical-align-middle">
+                            <div class="margin-bottom-5">茂名云办公</div>
+                            <i class="wi-day-sunny font-size-24 margin-bottom-5"></i>
+                            <div class="red-600">1
+                              <span class="font-size-12">台</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-5 bg-blue-grey-100 height-full">
+                  <div class="weather-list">
+                    <ul class="list-unstyled margin-0">
+                      <li class="container-fluid">
+                        <div class="row no-space">
+                          <div class="col-xs-4">
+                            121.10.10.1
+                          </div>
+                          <div class="col-xs-4">
+                           <span class="label label-success font-weight-100">运行中</span>
+                          </div>
+                          <div class="col-xs-4">
+                            24 - 26
+                          </div>
+                        </div>
+                      </li>
+                      <li class="container-fluid">
+                        <div class="row no-space">
+                          <div class="col-xs-4">
+                            121.10.10.2
+                          </div>
+                          <div class="col-xs-4">
+                            <span class="label label-default font-weight-100">已关机</span>
+                          </div>
+                          <div class="col-xs-4">
+                            24 - 26
+                          </div>
+                        </div>
+                      </li>
+                      <li class="container-fluid">
+                        <div class="row no-space">
+                          <div class="col-xs-4">
+                            121.10.10.3
+                          </div>
+                          <div class="col-xs-4">
+                            <span class="label label-warning font-weight-100">已过期</span>
+                          </div>
+                          <div class="col-xs-4">
+                            24 - 26
+                          </div>
+                        </div>
+                      </li>
+                      <li class="container-fluid">
+                        <div class="row no-space">
+                          <div class="col-xs-4">
+                            121.10.10.4
+                          </div>
+                          <div class="col-xs-4">
+                            <span class="label label-success font-weight-100">运行中</span>
+                          </div>
+                          <div class="col-xs-4">
+                            24 - 26
+                          </div>
+                        </div>
+                      </li>
+                      <li class="container-fluid">
+                        <div class="row no-space">
+                          <div class="col-xs-4">
+                            121.10.10.5
+                          </div>
+                          <div class="col-xs-4">
+                            <span class="label label-success font-weight-100">运行中</span>
+                          </div>
+                          <div class="col-xs-4">
+                            24 - 26
+                          </div>
+                        </div>
+                      </li>
+                      <li class="container-fluid">
+                        <div class="row no-space">
+                          <div class="col-xs-4">
+                            121.10.10.6
+                          </div>
+                          <div class="col-xs-4">
+                            <span class="label label-success font-weight-100">运行中</span>
+                          </div>
+                          <div class="col-xs-4">
+                            24 - 26
+                          </div>
+                        </div>
+                      </li>
+                      <li class="container-fluid">
+                        <div class="row no-space">
+                          <div class="col-xs-4">
+                            121.10.10.7
+                          </div>
+                          <div class="col-xs-4">
+                            <span class="label label-success font-weight-100">运行中</span>
+                          </div>
+                          <div class="col-xs-4">
+                            24 - 26
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- End Panel California -->
+        </div>
+        <div class="col-xlg-3 col-md-6">
+          <!-- Panel Watchlist -->
+          <div class="widget widget-shadow" id="widgetTable">
+            <div class="widget-body padding-30">
+              <h3 class="widget-title">
+                <span class="text-truncate">工单情况</span>
+				<span Class="label label-dark label-round pull-right">列表</span>              </h3>
+              <form class="margin-top-25" action="#" role="search">
+                <div class="input-search input-search-dark">
+                  <i class="input-search-icon wb-search" aria-hidden="true"></i>
+                  <input type="text" class="form-control" placeholder="Search.." />
+                </div>
+              </form>
+            </div>
+            <table class="table margin-bottom-0">
+              <tbody>
+                <tr>
+                  <td>可以购买100年吗？</td>
+               
+                  <td class="green-600">处理中</td>
+                </tr>
+                <tr>
+                  <td>重启启动出错</td>
+               
+                  <td class="red-600">已完成</td>
+                </tr>
+                <tr>
+                  <td>可以购买100年吗？</td>
+                  
+                  <td class="green-600">处理中</td>
+                </tr>
+                <tr>
+                  <td>可以购买100年吗？</td>
+                
+                  <td class="green-600">处理中</td>
+                </tr>
+                <tr>
+                  <td>可以购买100年吗？</td>
+                  
+                  <td class="red-600">已完成</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <!-- End Panel Watchlist -->
+        </div>
+        <div class="col-xlg-3 col-md-6">
+          <!-- Widget Linepoint -->
+          <div class="widget widget-shadow" id="widgetLinepointDate">
+            <div class="widget-body padding-30">
+              <h3 class="widget-title">Sales Analysis
+                <span Class="label label-dark label-round pull-right">列表</span>
+              </h3>
+              <div class="row text-center margin-vertical-25">
+                <div class="col-xs-4">
+                  <div class="counter">
+                    <div class="counter-label">TOTAL</div>
+                    <div class="counter-number red-600">20,186</div>
+                  </div>
+                </div>
+                <div class="col-xs-4">
+                  <div class="counter">
+                    <div class="counter-label">TODAY</div>
+                    <div class="counter-number red-600">36</div>
+                  </div>
+                </div>
+                <div class="col-xs-4">
+                  <div class="counter">
+                    <div class="counter-label">WEEK</div>
+                    <div class="counter-number red-600">261</div>
+                  </div>
+                </div>
+              </div>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
+                nec odio. Praesent libero.</p>
+            </div>
+            <div class="ct-chart height-150"></div>
+          </div>
+          <!-- End Widget Linepoint -->
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End Page -->
+  <!-- Footer -->
+  <footer class="site-footer">
+    
+    <div class="site-footer-right">  <a href="http://www.qy.com.cn">群英官网</a>
+    </div>
+  </footer>
+  <!-- Core  -->
+  <script src="vendor/jquery/jquery.js"></script>
+  <script src="vendor/bootstrap/bootstrap.js"></script>
+  <script src="vendor/animsition/animsition.js"></script>
+  <script src="vendor/asscroll/jquery-asScroll.js"></script>
+  <script src="vendor/mousewheel/jquery.mousewheel.js"></script>
+  <script src="vendor/asscrollable/jquery.asScrollable.all.js"></script>
+  <script src="vendor/ashoverscroll/jquery-asHoverScroll.js"></script>
+  <!-- Plugins -->
+  <script src="vendor/switchery/switchery.min.js"></script>
+  <script src="vendor/intro-js/intro.js"></script>
+  <script src="vendor/screenfull/screenfull.js"></script>
+  <script src="vendor/slidepanel/jquery-slidePanel.js"></script>
+  <script src="vendor/skycons/skycons.js"></script>
+  <script src="vendor/chartist-js/chartist.min.js"></script>
+  <script src="vendor/chartist-plugin-tooltip/chartist-plugin-tooltip.min.js"></script>
+  <script src="vendor/aspieprogress/jquery-asPieProgress.min.js"></script>
+  <script src="vendor/jvectormap/jquery.jvectormap.min.js"></script>
+  <script src="vendor/jvectormap/maps/jquery-jvectormap-au-mill-en.js"></script>
+  <script src="vendor/matchheight/jquery.matchHeight-min.js"></script>
+  <!-- Scripts -->
+  <script src="js/core.js"></script>
+  <script src="assets/js/site.js"></script>
+  <script src="assets/js/sections/menu.js"></script>
+  <script src="assets/js/sections/menubar.js"></script>
+  <script src="assets/js/sections/gridmenu.js"></script>
+  <script src="assets/js/sections/sidebar.js"></script>
+  <script src="js/configs/config-colors.js"></script>
+  <script src="assets/js/configs/config-tour.js"></script>
+  <script src="js/components/asscrollable.js"></script>
+  <script src="js/components/animsition.js"></script>
+  <script src="js/components/slidepanel.js"></script>
+  <script src="js/components/switchery.js"></script>
+  <script src="js/components/matchheight.js"></script>
+  <script src="js/components/jvectormap.js"></script>
+  <script src="assets/examples/js/dashboard/v1.js"></script>
+  
+</body>
+</html>

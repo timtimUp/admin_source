@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html class="no-js css-menubar" lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+  <title>查看--磁盘管理--群英云管理平台</title>
+  <link rel="shortcut icon" href="images/favicon.ico">
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/bootstrap-extend.min.css">
+  <link rel="stylesheet" href="css/site.min.css">
+  <!-- Plugins -->
+  <link rel="stylesheet" href="vendor/asscrollable/asScrollable.css">
+  <link rel="stylesheet" href="vendor/switchery/switchery.css">
+  <link rel="stylesheet" href="vendor/morris-js/morris.css">
+
+  <!-- Fonts -->
+  <link rel="stylesheet" href="fonts/web-icons/web-icons.min.css">
+  <link rel="stylesheet" href="fonts/font-awesome/font-awesome.css">
+
+  <!-- Fonts -->
+
+  <!--菜单-->
+  <link href="css/css.css" rel="stylesheet" type="text/css" />
+  <link href="css/jquery.mCustomScrollbar.css" rel="stylesheet">
+  
+  <!--[if lt IE 9]>
+    <script src="vendor/html5shiv/html5shiv.min.js"></script>
+    <![endif]-->
+  <!--[if lt IE 10]>
+    <script src="vendor/media-match/media.match.min.js"></script>
+    <script src="vendor/respond/respond.min.js"></script>
+    <![endif]-->
+  <!-- Scripts -->
+  <script src="vendor/modernizr/modernizr.js"></script>
+  <script src="vendor/breakpoints/breakpoints.js"></script>
+  <script>
+  Breakpoints();
+  </script>
+  <script src="js/jquery.js"></script>  
+  <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+  
+</head>
+<body class="dashboard">
+  <!--[if lt IE 8]>
+        <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+  <nav class="site-navbar navbar navbar-default navbar-fixed-top navbar-mega" role="navigation">
+    <div class="navbar-header">		
+     
+      <div data-toggle="gridmenu">
+        <img class="navbar-brand-logo" src="images/smallLogo.jpg" title="群英云">
+      </div>
+      
+    </div>
+    <div class="navbar-container container-fluid">
+      <!-- Navbar Collapse -->
+      <div class="collapse navbar-collapse navbar-collapse-toolbar" id="site-navbar-collapse">
+        <!-- Navbar Toolbar -->
+        <ul class="nav navbar-toolbar">
+          <li class="hidden-float" id="toggleMenubar">
+            <a data-toggle="menubar" href="#" role="button">
+              <i class="icon hamburger hamburger-arrow-left">
+                  <span class="sr-only">伸缩菜单</span>
+                  <span class="hamburger-bar"></span>
+                </i>
+            </a>
+          </li>
+          <li class="hidden-xs" id="toggleFullscreen">
+            <a class="icon icon-fullscreen" data-toggle="fullscreen" href="#" role="button">
+              <span class="sr-only">全屏</span>
+            </a>
+          </li>
+       
+          
+        </ul>
+        <!-- End Navbar Toolbar -->
+        <!-- Navbar Toolbar Right -->
+        <ul class="nav navbar-toolbar navbar-right navbar-toolbar-right">
+        
+          <li class="dropdown">
+            <a class="navbar-avatar dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false"    data-animation="scale-up" role="button">
+                  <i class="icon wb-user font-size-24" ></i>
+             </a>
+            <ul class="dropdown-menu" role="menu">
+              <li role="presentation">
+                <a href="javascript:void(0)" role="menuitem"><i class="icon wb-user" aria-hidden="true"></i> 用户中心</a>
+              </li>
+              <li role="presentation">
+                <a href="javascript:void(0)" role="menuitem"><i class="icon wb-payment" aria-hidden="true"></i> 财务账户</a>
+              </li>
+              <li role="presentation">
+                <a href="javascript:void(0)" role="menuitem"><i class="icon wb-settings" aria-hidden="true"></i> 修改密码</a>
+              </li>
+              <li class="divider" role="presentation"></li>
+              <li role="presentation">
+                <a href="javascript:void(0)" role="menuitem"><i class="icon wb-power" aria-hidden="true"></i> 退出</a>
+              </li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a data-toggle="dropdown" href="javascript:void(0)" title="Notifications" aria-expanded="false" data-animation="scale-up" role="button">
+              <i class="icon wb-bell" aria-hidden="true"></i>
+              <span class="badge badge-danger up">5</span>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-right dropdown-menu-media" role="menu">
+              <li class="dropdown-menu-header" role="presentation">
+                <h5>NOTIFICATIONS</h5>
+                <span class="label label-round label-danger">New 5</span>
+              </li>
+              <li class="list-group" role="presentation">
+                <div data-role="container">
+                  <div data-role="content">
+                    <a class="list-group-item" href="javascript:void(0)" role="menuitem">
+                      <div class="media">
+                        <div class="media-left padding-right-10">
+                          <i class="icon wb-order bg-red-600 white icon-circle" aria-hidden="true"></i>
+                        </div>
+                        <div class="media-body">
+                          <h6 class="media-heading">A new order has been placed</h6>
+                          <time class="media-meta" datetime="2015-06-12T20:50:48+08:00">5 hours ago</time>
+                        </div>
+                      </div>
+                    </a>
+                    <a class="list-group-item" href="javascript:void(0)" role="menuitem">
+                      <div class="media">
+                        <div class="media-left padding-right-10">
+                          <i class="icon wb-user bg-green-600 white icon-circle" aria-hidden="true"></i>
+                        </div>
+                        <div class="media-body">
+                          <h6 class="media-heading">Completed the task</h6>
+                          <time class="media-meta" datetime="2015-06-11T18:29:20+08:00">2 days ago</time>
+                        </div>
+                      </div>
+                    </a>
+                    <a class="list-group-item" href="javascript:void(0)" role="menuitem">
+                      <div class="media">
+                        <div class="media-left padding-right-10">
+                          <i class="icon wb-settings bg-red-600 white icon-circle" aria-hidden="true"></i>
+                        </div>
+                        <div class="media-body">
+                          <h6 class="media-heading">Settings updated</h6>
+                          <time class="media-meta" datetime="2015-06-11T14:05:00+08:00">2 days ago</time>
+                        </div>
+                      </div>
+                    </a>
+                    <a class="list-group-item" href="javascript:void(0)" role="menuitem">
+                      <div class="media">
+                        <div class="media-left padding-right-10">
+                          <i class="icon wb-calendar bg-blue-600 white icon-circle" aria-hidden="true"></i>
+                        </div>
+                        <div class="media-body">
+                          <h6 class="media-heading">Event started</h6>
+                          <time class="media-meta" datetime="2015-06-10T13:50:18+08:00">3 days ago</time>
+                        </div>
+                      </div>
+                    </a>
+                    <a class="list-group-item" href="javascript:void(0)" role="menuitem">
+                      <div class="media">
+                        <div class="media-left padding-right-10">
+                          <i class="icon wb-chat bg-orange-600 white icon-circle" aria-hidden="true"></i>
+                        </div>
+                        <div class="media-body">
+                          <h6 class="media-heading">Message received</h6>
+                          <time class="media-meta" datetime="2015-06-10T12:34:48+08:00">3 days ago</time>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </li>
+              <li class="dropdown-menu-footer" role="presentation">
+                <a class="dropdown-menu-footer-btn" href="javascript:void(0)" role="button">
+                  <i class="icon wb-settings" aria-hidden="true"></i>
+                </a>
+                <a href="javascript:void(0)" role="menuitem">
+                    All notifications
+                  </a>
+              </li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a data-toggle="dropdown" href="javascript:void(0)" title="Messages" aria-expanded="false"
+            data-animation="scale-up" role="button">
+              <i class="icon wb-envelope" aria-hidden="true"></i>
+              <span class="badge badge-info up">3</span>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-right dropdown-menu-media" role="menu">
+              <li class="dropdown-menu-header" role="presentation">
+                <h5>MESSAGES</h5>
+                <span class="label label-round label-info">New 3</span>
+              </li>
+              <li class="list-group" role="presentation">
+                <div data-role="container">
+                  <div data-role="content">
+                    <a class="list-group-item" href="javascript:void(0)" role="menuitem">
+                      <div class="media">
+                        <div class="media-left padding-right-10">
+                          <span class="avatar avatar-sm avatar-online">
+                            <img src="../../global/portraits/2.jpg" alt="..." />
+                            <i></i>
+                          </span>
+                        </div>
+                        <div class="media-body">
+                          <h6 class="media-heading">Mary Adams</h6>
+                          <div class="media-meta">
+                            <time datetime="2015-06-17T20:22:05+08:00">30 minutes ago</time>
+                          </div>
+                          <div class="media-detail">Anyways, i would like just do it</div>
+                        </div>
+                      </div>
+                    </a>
+                    <a class="list-group-item" href="javascript:void(0)" role="menuitem">
+                      <div class="media">
+                        <div class="media-left padding-right-10">
+                          <span class="avatar avatar-sm avatar-off">
+                            <img src="../../global/portraits/3.jpg" alt="..." />
+                            <i></i>
+                          </span>
+                        </div>
+                        <div class="media-body">
+                          <h6 class="media-heading">Caleb Richards</h6>
+                          <div class="media-meta">
+                            <time datetime="2015-06-17T12:30:30+08:00">12 hours ago</time>
+                          </div>
+                          <div class="media-detail">I checheck the document. But there seems</div>
+                        </div>
+                      </div>
+                    </a>
+                    <a class="list-group-item" href="javascript:void(0)" role="menuitem">
+                      <div class="media">
+                        <div class="media-left padding-right-10">
+                          <span class="avatar avatar-sm avatar-busy">
+                            <img src="../../global/portraits/4.jpg" alt="..." />
+                            <i></i>
+                          </span>
+                        </div>
+                        <div class="media-body">
+                          <h6 class="media-heading">June Lane</h6>
+                          <div class="media-meta">
+                            <time datetime="2015-06-16T18:38:40+08:00">2 days ago</time>
+                          </div>
+                          <div class="media-detail">Lorem ipsum Id consectetur et minim</div>
+                        </div>
+                      </div>
+                    </a>
+                    <a class="list-group-item" href="javascript:void(0)" role="menuitem">
+                      <div class="media">
+                        <div class="media-left padding-right-10">
+                          <span class="avatar avatar-sm avatar-away">
+                            <img src="../../global/portraits/5.jpg" alt="..." />
+                            <i></i>
+                          </span>
+                        </div>
+                        <div class="media-body">
+                          <h6 class="media-heading">Edward Fletcher</h6>
+                          <div class="media-meta">
+                            <time datetime="2015-06-15T20:34:48+08:00">3 days ago</time>
+                          </div>
+                          <div class="media-detail">Dolor et irure cupidatat commodo nostrud nostrud.</div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </li>
+              <li class="dropdown-menu-footer" role="presentation">
+                <a class="dropdown-menu-footer-btn" href="javascript:void(0)" role="button">
+                  <i class="icon wb-settings" aria-hidden="true"></i>
+                </a>
+                <a href="javascript:void(0)" role="menuitem">
+                    See all messages
+                  </a>
+              </li>
+            </ul>
+          </li>
+        
+        </ul>
+        <!-- End Navbar Toolbar Right -->
+      </div>
+      <!-- End Navbar Collapse -->
+    
+     
+    </div>
+  </nav>
+  <div class="site-menubar">
+    
+
+<div class="leftMenu">
+  <div class="firstNavScroll scrollable">
+  	<a href="#" dataChi="none"><i></i><img src="images/lfticon1.png" /><span>首页</span></a>
+  	<a href="#" dataChi="secM2" class="cur"><i></i><img src="images/lfticon4.png" /><span>云主机</span></a>
+  	<a href="#" dataChi="secM3"><i></i><img src="images/lfticon3.png" /><span>租用托管</span></a> 
+  	<a href="#" dataChi="secM4" ><i></i><img src="images/lfticon2.png" /><span>域名空间</span></a>
+  	<a href="#" dataChi="secM5"><i></i><img src="images/lfticon5.png" /><span>CDN加速</span></a>
+  	<a href="#" dataChi="secM6"><i></i><img src="images/lfticon6.png" /><span>智能DNS</span></a>
+    <a href="#" dataChi="secM7"><i></i><img src="images/lfticon7.png" /><span>财务帐户</span></a>
+    <a href="#" dataChi="secM8"><i></i><img src="images/lfticon8.png" /><span>用户信息</span></a>
+
+  </div>
+  <div class="secondNavScroll" id="secondNavScroll">
+    <div class="cons">
+	 <div id="default_show" class="secCon secM2 shows" >
+		<a href="index.html">总览</a>
+        <a href="cloud_list.html">云服务器</a>
+		<a href="cloud_order_list.html">订单管理</a>
+        <a href="cloud_disc_list.html" class="on">磁盘管理</a>
+        <a href="cloud_bandwidth_list.html">IP带宽</a>
+        <a href="cloud_snap_list.html">快照管理</a>
+        <a href="cloud_image_list.html">镜像管理</a>
+ 		<a href="cloud_record_list.html">操作日志</a>		
+      </div>
+      
+      <div class="secCon secM3">
+        <a href="server_manage.html">服务器</a>
+        <a href="server_order.html">订单管理</a>
+		<a href="server_whitelist.html">白名单</a>
+        <!-- <a href="#">资产管理</a> -->
+      </div>
+     <div class="secCon secM4">
+        <a href="#">域名管理</a>
+		<a href="#">域名转入</a>
+        <a href="#">空间管理</a>
+        <a href="#">数据库</a>        
+        <a href="#">日志管理</a>
+	    <a href="#">订单管理</a>
+ 
+      </div>
+      <div class="secCon secM5">
+        <a href="#">总览</a>
+        <a href="#">加速域名</a>
+        <a href="#">刷新缓存</a>
+        <a href="#">文件分发</a>
+        <a href="#">带宽统计</a>
+        <a href="#">日志下载</a>
+
+      </div>
+      <div class="secCon secM6">
+        <a href="#">域名解析</a>
+        <a href="#">DNS管理</a>
+        <a href="#">订单管理</a>
+        <a href="#">消息通知</a>
+        <a href="#">操作日志</a>
+		<a href="#">DNS诊断</a>
+      </div>
+      <div class="secCon secM7">
+        <a href="#">财务账户</a>
+        <a href="#">消费记录</a>
+        <a href="#">发票信息</a>
+		<a href="#">汇款信息</a>
+      </div>
+      <div class="secCon secM8">
+        <a href="#">基本信息</a>
+        <a href="#">安全认证</a>
+      </div>
+    </div>
+  </div>
+<!------------------->
+<div class="secondNavScrolls" id="secondNavScrolls">
+    <div class="consz">
+    	<div class="secConz none margin-top0"  >
+        <a href="#">域名管理</a>
+        <a href="#">主机管理</a>
+	     	<a href="#">域名交易</a>
+        <a href="#">域名抢注</a>
+      </div>
+	 <div class="secConz secM2 margin-top84" datachs = "secM2"  >
+        <a href="index.html">总览</a>
+        <a href="cloud_list.html">云服务器</a>
+		<a href="cloud_order_list.html">订单管理</a>
+        <a href="cloud_disc_list.html" class="on">磁盘管理</a>
+        <a href="cloud_bandwidth_list.html">IP带宽</a>
+        <a href="cloud_snap_list.html">快照管理</a>
+        <a href="cloud_image_list.html">镜像管理</a>
+ 		<a href="cloud_record_list.html">操作日志</a>
+      </div>
+      
+      <div class="secConz secM3 margin-top168" datachs = "secM3">
+        <a href="server_manage.html">服务器</a>
+        <a href="server_order.html">订单管理</a>
+		<a href="server_whitelist.html">白名单</a>
+        <!-- <a href="#">资产管理</a> -->
+      </div>
+     <div class="secConz secM4  margin-top252" datachs = "secM4">
+        <a href="#">域名管理</a>
+		<a href="#">域名转入</a>
+        <a href="#">空间管理</a>
+        <a href="#">数据库</a>        
+        <a href="#">日志管理</a>
+	    <a href="#">订单管理</a>
+ 
+      </div>
+      <div class="secConz secM5  margin-top336" datachs = "secM5">
+        <a href="#">总览</a>
+        <a href="#">加速域名</a>
+        <a href="#">刷新缓存</a>
+        <a href="#">文件分发</a>
+        <a href="#">带宽统计</a>
+        <a href="#">日志下载</a>
+
+      </div>
+      <div class="secConz secM6  margin-top420 " datachs = "secM6">
+        <a href="#">域名解析</a>
+        <a href="#">DNS管理</a>
+        <a href="#">订单管理</a>
+        <a href="#">消息通知</a>
+        <a href="#">操作日志</a>
+				<a href="#">DNS诊断</a>
+      </div>
+      <div class="secConz secM7 margin-top504" datachs = "secM7">
+        <a href="#">财务账户</a>
+        <a href="#">消费记录</a>
+        <a href="#">发票信息</a>
+		<a href="#">汇款信息</a>
+      </div>
+      <div class="secConz secM8  margin-top588" datachs = "secM8">
+        <a href="#">基本信息</a>
+        <a href="#">安全认证</a>
+      </div>
+    </div>
+  </div>
+<!--------------------->
+</div>
+
+<script type="text/javascript">
+
+
+$(function(){
+
+	lftMenuSize();
+	$(window).resize(function(){//屏幕高度变化时初始化高度
+		lftMenuSize();
+	});
+	
+$()
+
+
+	$(".firstNavScroll a").click(function(){//点击出现二级菜单
+		var dataChi = $(this).attr("dataChi");
+		var attrclass = $("#toggleMenubar i").attr('class');
+		$(this).addClass("cur").siblings().removeClass("cur");
+		if(attrclass != "icon hamburger hamburger-arrow-left hided unfolded"){
+			$("#secondNavScroll").hide();
+			$("#secondNavScrolls div").removeClass("shows1");
+			$("#secondNavScrolls").show();
+			$("#secondNavScrolls").find('.'+dataChi).addClass("shows1");
+		}else{
+			$("#secondNavScrolls").hide();
+			$("#secondNavScroll div").removeClass("shows");
+			$("#secondNavScroll").show();
+			$("#secondNavScroll").find('.'+dataChi).addClass("shows");
+			
+		}
+	});
+	
+	
+	$("#toggleMenubar").click(function(){
+		var attrclass = $("#toggleMenubar i").attr('class');
+		if(attrclass == "icon hamburger hamburger-arrow-left hided unfolded"){
+			$("#secondNavScroll").hide();
+		}else{
+			$("#secondNavScroll").show();
+			$("#secondNavScrolls").hide();
+		}		
+	});
+
+
+});
+
+function lftMenuSize(){//初始化高度
+	var winH=$(window).height();
+	$(".leftMenu").height(winH);
+	//	$(".secondNavScroll").addClass(".secondNavScrollz");
+}
+
+
+</script>
+
+
+  </div>
+   
+  <!-- Page -->
+  <div class="page animsition">
+    <div class="page-content padding-30 container-fluid">
+      <div class="row" data-plugin="matchHeight" data-by-row="true">
+	  <!--左边-->
+	  <div class="col-md-3 col-md-12">
+	 <div class="panel">
+            <div class="panel-heading">
+              <h3 class="panel-title">基本信息</h3>
+            </div>
+            <div class="panel-body">
+             <table class="table table-hover">
+               
+              <tbody>
+			    <tr>
+                  <td>磁盘名称</td>
+                  <td>TestHost</td> 
+                </tr>
+                <tr>
+                  <td>磁盘种类</td>
+                  <td>TestHost</td>
+                
+                </tr>
+                <tr>
+                  <td>磁盘状态</td>
+                  <td>TestHost</td>
+                  
+                </tr>
+				<tr>
+                  <td>付费类型</td>
+                  <td>TestHost</td>                  
+                </tr>
+                <tr>
+                  <td>容量（GB）</td>
+                  <td>TestHost</td>                  
+                </tr>
+                <tr>
+                  <td>可卸载</td>
+                  <td>TestHost</td> 
+                </tr>
+                <tr>
+                  <td>磁盘属性</td>
+                  <td>TestHost</td>
+                
+                </tr>
+                <tr>
+                  <td>快照策略</td>
+                  <td>TestHost</td>
+                  
+                </tr>
+				<tr>
+                  <td>付费类型</td>
+                  <td>TestHost</td>                  
+                </tr>
+                <tr>
+                  <td>硬盘描述</td>
+                  <td>TestHost</td>                  
+                </tr>
+              </tbody>
+            </table>
+            </div>
+          </div>
+		  
+		   <!--配置信息-->
+		   <div class="panel">
+            <div class="panel-heading">
+              <h3 class="panel-title">磁盘挂载信息</h3>
+              <div class="panel-actions">
+                <a class="panel-action icon wb-menu" data-toggle="dropdown" aria-hidden="true"></a>
+				 <ul class="dropdown-menu bullet dropdown-menu-right" aria-labelledby="examplePanelDropdown" role="menu">
+					<li role="presentation"><a href="javascript:void(0)" role="menuitem"><i class="icon wb-arrow-shrink" aria-hidden="true"></i> 加载</a></li>
+					<li role="presentation"><a href="javascript:void(0)" role="menuitem"><i class="icon wb-arrow-expand" aria-hidden="true"></i> 卸载</a></li>
+                    <li class="divider" role="presentation"></li>
+                    <li role="presentation"><a href="javascript:void(0)" role="menuitem"><i class="icon wb-settings" aria-hidden="true"></i> 设置</a></li>
+					<li role="presentation"><a href="javascript:void(0)" role="menuitem"><i class="icon wb-trash" aria-hidden="true"></i> 删除</a></li>
+                 </ul>
+              </div>
+            </div>
+            <div class="panel-body">
+             <table class="table table-hover">
+             
+              <tbody>
+			    <tr>
+			     <td>所挂载的实例</td>
+                  <td>TestHost</td> 
+				</tr>
+                <tr>
+                  <td>挂载点</td>
+                  <td>TestHost</td>
+                
+                </tr>
+                <tr>
+                  <td>磁盘状态</td>
+                  <td>TestHost</td>
+                  
+                </tr>
+                <tr>
+                  <td>磁盘是否随实例释放</td>
+                  <td>TestHost</td>                  
+                </tr>
+                
+				<tr>
+                  <td>自动快照是否随磁盘释放</td>
+                  <td>TestHost</td>                  
+                </tr>
+              </tbody>
+            </table>
+            </div>
+          </div>
+		  
+		  <!--计算开始-->
+		   <div class="panel">
+            <div class="panel-heading">
+              <h3 class="panel-title">业务信息</h3>
+              <div class="panel-actions">
+                <a class="panel-action icon wb-menu" data-toggle="dropdown"  aria-hidden="true"></a>
+				<ul class="dropdown-menu bullet dropdown-menu-right" aria-labelledby="examplePanelDropdown"    role="menu">   
+				<li role="presentation"><a href="javascript:void(0)" role="menuitem"><i class="icon fa-shopping-cart" aria-hidden="true"></i> 购买</a></li>
+				<li role="presentation"><a href="javascript:void(0)" role="menuitem"><i class="icon fa-mail-reply-all" aria-hidden="true"></i> 续费</a></li>    
+                </ul>
+              </div>
+            </div>
+            <div class="panel-body">
+             <table class="table table-hover">
+               
+              <tbody>
+			    <tr>
+                  <td>ID</td>
+                  <td>TestHost</td> 
+                </tr>
+                <tr>
+                  <td>开始计费时间</td>
+                  <td>TestHost</td>                
+                </tr>
+                <tr>
+                  <td>停止计费时间</td>
+                  <td>TestHost</td>                  
+                </tr>
+                <tr>
+                  <td>计费方式</td>
+                  <td>TestHost</td>                  
+                </tr>
+                <tr>
+                  <td>价格</td>
+                  <td>TestHost</td>                  
+                </tr>
+              </tbody>
+            </table>
+            </div>
+          </div>
+		   </div>
+		   <!--左边End-->
+		   <!--右边-->
+ 		  <div class="col-md-9 col-md-12">
+		  <div class="example-wrap">
+            <div class="nav-tabs-horizontal nav-tabs-inverse">
+              <ul class="nav nav-tabs nav-tabs-solid" data-plugin="nav-tabs" role="tablist">
+                <li class="active" role="presentation">
+                  <a data-toggle="tab" href="#exampleTabsSolidInverse1" aria-controls="exampleTabsSolidInverseOne"
+                  role="tab">
+                  监控
+                </a>
+                </li>
+                <li role="presentation">
+                  <a data-toggle="tab" href="#exampleTabsSolidInverse2" aria-controls="exampleTabsSolidInverseTwo"
+                  role="tab">
+                  备份
+                </a>
+                </li>
+				<li role="presentation">
+                  <a data-toggle="tab" href="#exampleTabsSolidInverse3" aria-controls="exampleTabsSolidInverseTwo"
+                  role="tab">
+                  操作日志
+                </a>
+                </li>
+              </ul>
+              <div class="tab-content">
+                <div class="tab-pane active" id="exampleTabsSolidInverse1" role="tabpanel">
+				<div class="row">
+				 <div class="btn-group pull-right margin-20" aria-label="Basic example" role="group">				 
+                    <button type="button" class="btn btn-outline btn-default  active">近6小时</button>
+                    <button type="button" class="btn btn-outline btn-default">近一天</button>
+					 <button type="button" class="btn btn-outline btn-default">近一周</button>
+                    <button type="button" class="btn btn-outline btn-default">近一月</button>
+                  </div>
+				  </div>
+				<div class="row row-lg">
+                  <div class="col-md-6">
+				  <!-- Example Realtime -->
+				  <div class="example-wrap">
+				  <div class="pull-right margin-right-20">
+                    <input type="checkbox" id="inputBasicOff" name="inputiCheckBasicCheckboxes" data-plugin="switchery"  data-color="#526069"  checked />
+                  </div>
+					<h4 class="example-title">硬盘使用率</h4>
+					<p>单位%</br>间隔时间5秒</p>
+					
+					<div class="example">
+					  <div id="exampleMorrisLine" style="background-color:#f3f7f9"></div>
+					</div>
+				  </div>
+				  <!-- End Example Realtime -->
+				 </div>
+				  <!-- Example Realtime -->
+				  <div class="col-md-6">
+				  <div class="example-wrap">
+					<div class="pull-right margin-right-20">
+                    <input type="checkbox" id="inputBasicOff" name="inputiCheckBasicCheckboxes" data-plugin="switchery"  data-color="#526069"  checked />
+                  </div>
+					<h4 class="example-title">硬盘 IOPS</h4>
+					<p>单位%</br>间隔时间5秒</p>
+					<div class="example">
+					 <div id="exampleMorrisLine1" style="background-color:#f3f7f9"></div>
+					</div>
+				  </div>
+				  </div>
+				  </div>
+				  <div class="row row-lg">
+				  <!-- End Example Realtime -->
+				 <div class="col-md-6">
+				  <!-- Example Line -->
+				  <div class="margin-md-0">
+				  <div class="pull-right margin-right-20">
+                    <input type="checkbox" id="inputBasicOff" name="inputiCheckBasicCheckboxes" data-plugin="switchery"  data-color="#526069"   />
+                  </div>
+					<h4 class="example-title">硬盘吞吐量</h4>
+					 <p>单位:硬盘IOPS</br>间隔时间5秒</p>
+					<div class="example">
+					  <div id="exampleMorrisLine2" style="background-color:#f3f7f9"></div>
+					</div>
+				  </div>
+				  <!-- End Example Line -->
+				</div>
+
+				  </div>
+                </div>
+                <div class="tab-pane" id="exampleTabsSolidInverse2" role="tabpanel">
+                  标签2
+                </div>
+				 <div class="tab-pane" id="exampleTabsSolidInverse3" role="tabpanel">
+                 标签3
+                </div>
+              </div>
+            </div>
+          </div>
+		  </div>
+		     <!--右边End-->
+	     </div>
+		</div>
+  </div>
+ 
+				
+  <!-- End Page -->
+  <!-- Footer -->
+  <footer class="site-footer">
+    
+    <div class="site-footer-right">  <a href="http://www.qy.com.cn" target="_blank">群英官网</a>
+    </div>
+  </footer>
+  <!-- Core  -->
+  <script src="vendor/jquery/jquery.js"></script>
+  <script src="vendor/bootstrap/bootstrap.js"></script>
+  <script src="vendor/asscroll/jquery-asScroll.js"></script>
+  <script src="vendor/asscrollable/jquery.asScrollable.all.js"></script>
+  <script src="vendor/ashoverscroll/jquery-asHoverScroll.js"></script>
+  <!-- Plugins -->
+  <script src="vendor/switchery/switchery.min.js"></script>
+  <script src="vendor/screenfull/screenfull.js"></script>
+  <script src="vendor/slidepanel/jquery-slidePanel.js"></script>
+  <script src="vendor/raphael/raphael-min.js"></script>
+  <script src="vendor/morris-js/morris.min.js"></script>
+  <!-- Scripts -->
+  <script src="js/core.js"></script>
+  <script src="assets/js/site.js"></script>
+  <script src="assets/js/sections/menu.js"></script>
+  
+  <script src="assets/js/sections/menubar.js"></script>
+   <script src="js/configs/config-colors.js"></script>
+  <script src="js/components/asscrollable.js"></script>
+  <script src="js/components/switchery.js"></script>
+   <script src="js/qy/flot.js"></script>
+
+
+</body>
+</html>

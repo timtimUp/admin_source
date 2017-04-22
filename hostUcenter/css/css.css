@@ -1,0 +1,52 @@
+@charset "utf-8";
+body{ margin:0 auto; font-size:12px; font-family: "雅黑",Arial, Helvetica, sans-serif; line-height:normal;}
+ul,dl,dd,h1,h2,h3,h4,h5,h6,form,p { padding:0; margin:0;}
+ul { list-style:none;}
+*{ margin:0px; padding:0px;}
+
+
+
+/** leftMenu Start **/
+.leftMenu{ width:66px; position:relative; left:0; top:0; background:#4a4a57;}
+.leftMenu .logos{ display:block; width:66px; height:61px; overflow:hidden;}
+.leftMenu .firstNavScroll{ overflow:hidden; position:absolute; left:0; bottom:0; top:0px;}
+.leftMenu .secondNavScroll{ width:82px; overflow:hidden; position:absolute; left:66px; bottom:0; top:0px; background:#e8e8e8;}
+.leftMenu .firstNavScroll a{ display:block; width:66px; padding:14px 0; text-align:center; overflow:hidden; position:relative; left:0; top:0; text-decoration:none}
+.leftMenu .firstNavScroll a img{ display:block; margin:0 auto;}
+.leftMenu .firstNavScroll a span{ display:block; height:20px; line-height:20px; text-align:center; padding:0 6px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; color:#fff; font-size:12px; font-family:simsun;}
+.leftMenu .firstNavScroll a i{ display:none; width:6px; height:9px; overflow:hidden; background:url(../images/arlcurIcon.png) no-repeat 0 0; position:absolute; right:0; top:50%; margin-top:-4px; z-index:5;}
+.leftMenu .firstNavScroll .cur{ background:#3e3e4a;}
+.leftMenu .firstNavScroll .cur i{ display:block}
+.leftMenu .mCSB_inside > .mCSB_container{ margin-right:0;}
+.leftMenu .mCSB_scrollTools{ width:5px;}
+.leftMenu .mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_dragger.mCSB_dragger_onDrag_expanded + .mCSB_draggerRail,.leftMenu .mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_draggerContainer:hover .mCSB_draggerRail{ width:5px;}
+.full-pages .mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_dragger.mCSB_dragger_onDrag_expanded .mCSB_dragger_bar,.leftMenu .mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_draggerContainer:hover .mCSB_dragger .mCSB_dragger_bar{ width:5px;}
+
+.leftMenu .secondNavScroll .cons{ overflow:hidden;}
+.leftMenu .secondNavScroll .secCon{ display:none}
+.leftMenu .secondNavScroll .shows{ display:block}
+.leftMenu .secondNavScroll a{ display:block; height:54px; line-height:54px; padding:0 5px; text-decoration:none; font-size:12px; color:#4a4a57; text-align:center; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+.leftMenu .secondNavScroll .on,.leftMenu .secondNavScroll a:hover{ background:#f3f3f3}
+/** leftMenu End **/
+.secondNavScrollz{visibility: hidden; width:82px; overflow:hidden; position:absolute; left:66px; bottom:0; top:0px; background:#e8e8e8; }
+.site-menubar-fold .site-menubar{width: 66px;}
+.site-menubar-fold .page, .site-menubar-fold .site-footer{margin-left: 70px;}
+.site-menubar-fold .site-navbar .navbar-header{width: 70px;}
+.site-menubar-fold .site-navbar .navbar-container{margin-left: 66px;}
+.secondNavScrollshide{width:100px; overflow:hidden; position:absolute; left:66px;  background:red; visibility: hidden;}
+.secondNavScrolls{ width:120px; overflow:hidden; position:absolute; left:66px; }
+.secondNavScrolls .consz{ overflow:hidden; width:120px;}
+.secondNavScrolls .secConz{ display:none}
+.secondNavScrolls .shows1{ display:block;z-index: 9999;}
+.secondNavScrolls a{ display:block; height:54px; line-height:54px; padding:0 5px; text-decoration:none; font-size:12px; color:#4a4a57; text-align:center; white-space:nowrap; overflow:hidden; }
+.secondNavScrolls .consz a{color:#fff;}
+.secondNavScrolls .consz a:hover{color:#fff; background:#ff5050;}
+.margin-top0{background:#40404c; color:#fff;}
+.margin-top84{margin-top: 84px; background:#40404c;color:#fff;}
+.margin-top168{margin-top: 168px; background:#40404c;color:#fff;}
+.margin-top252{margin-top: 252px; background:#40404c;color:#fff;}
+.margin-top336{margin-top: 336px; background:#40404c;color:#fff;}
+.margin-top420{margin-top: 420px; background:#40404c;color:#fff;}
+.margin-top504{margin-top: 504px; background:#40404c;color:#fff;}
+.margin-top588{margin-top:588px; background:#40404c;color:#fff;}
+.margin-top672{margin-top:672px;background:#40404c;color:#fff;}
